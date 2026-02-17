@@ -1,103 +1,105 @@
-# Mobile-Price-Range-classification
 
-📌 Problem Statement
 
-Bob has started his own mobile manufacturing company and wants to compete with major brands like Apple and Samsung.
 
-However, he does not know how to estimate the price of mobile phones based on their features.
+📱 Mobile Price Range classification API (FastAPI)
+🚀 Project Overview
 
-The goal of this project is to analyze the relationship between mobile features (such as RAM, Battery Power, Internal Memory, etc.) and predict the price range category of the phone.
+This project builds a Machine Learning model to predict the price range category of a mobile phone based on its specifications such as RAM, Battery Power, Internal Memory, and more.
 
-⚠️ Note:
-This is a classification problem — we predict price range (0–3), not the exact price.
+The trained model is deployed using FastAPI, allowing real-time predictions through a REST API.
 
-🎯 Objective
+🎯 Problem Statement
 
-Build a Machine Learning model that predicts the price range of a mobile phone based on its specifications.
+Bob wants to compete with major mobile brands but does not know how to estimate phone pricing.
 
-Price Range Categories:
+Instead of predicting exact prices, we classify phones into 4 price categories:
 
-0 → Low Cost
+Price Range	Category
+0	Low Cost
+1	Medium Cost
+2	High Cost
+3	Very High Cost
 
-1 → Medium Cost
+This is a Multi-Class Classification Problem.
 
-2 → High Cost
+🧠 Machine Learning Model
 
-3 → Very High Cost
+Algorithm Used: Random Forest / SVM / Gradient Boosting
 
-📊 Dataset Description
+Train-Test Split: 80-20
 
-The dataset contains mobile phone specifications such as:
+Accuracy Achieved: ~90–95%
 
-Battery Power
+Important Features:
 
 RAM
 
+Battery Power
+
 Internal Memory
 
-Mobile Weight
+Screen Resolution
 
-Screen Width
-
-Screen Height
-
-Camera Resolution
-
-3G / 4G Support
-
-Touch Screen
-
-WiFi
-
-etc.
-
-Target Column:
-
-price_range (0,1,2,3)
-
-🛠️ Technologies Used
+🛠️ Tech Stack
 
 Python
 
-Pandas
-
-NumPy
-
 Scikit-learn
 
-Matplotlib / Seaborn
+Pandas
 
-🚀 Machine Learning Approach
+FastAPI
 
-Data Cleaning
+Uvicorn
 
-Feature Selection
+Joblib
 
-Train-Test Split (80-20)
+📂 Project Structure
+mobile-price-api/
+│
+├── main.py
+├── mobile_price_model.pkl
+├── train.csv
+├── requirements.txt
+└── README.md
 
-Model Training
+⚙️ Installation
+1️⃣ Clone Repository
+git clone https://github.com/yourusername/mobile-price-api.git
+cd mobile-price-api
 
-Model Evaluation
+2️⃣ Install Dependencies
+pip install -r requirements.txt
 
-🤖 Algorithms Used
+▶️ Run the API
+uvicorn main:app --reload
 
-Logistic Regression
 
-Support Vector Machine (SVM)
+Server will start at:
 
-Gradient Boosting
+http://127.0.0.1:8000
 
-Random Forest
+📄 API Documentation (Swagger UI)
 
-📌 Future Improvements
+Open in browser:
 
-Hyperparameter tuning using GridSearchCV
+http://127.0.0.1:8000/docs
 
-Use XGBoost for higher accuracy
 
-Deploy model using Streamlit
 
-Create API using FastAPI
+
+🧾 requirements.txt
+fastapi
+uvicorn
+scikit-learn
+joblib
+numpy
+pandas
+pydantic
+
+
+
+
 
 
 to get code & data kaggle link :https://www.kaggle.com/code/jagrutiyuvrajdhangar/mobile-price-range-classfication
