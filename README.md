@@ -1,7 +1,7 @@
 
 
 
-📱 Mobile Price Range classification API (FastAPI)
+📱 Mobile Price Range classification  (FastAPI)
 🚀 Project Overview
 
 This project builds a Machine Learning model to predict the price range category of a mobile phone based on its specifications such as RAM, Battery Power, Internal Memory, and more.
