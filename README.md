@@ -4,7 +4,8 @@
 📱 Mobile Price Range classification  (FastAPI)
 🚀 Project Overview
 
-This project builds a Machine Learning model to predict the price range category of a mobile phone based on its specifications such as RAM, Battery Power, Internal Memory, and more.
+This project builds a Machine Learning model to predict the price range category of a mobile phone based on its specifications such as RAM, Battery Power, Internal Memory, and more. the price range of a mobile phone based on its specifications.
+The model is trained using scikit-learn and deployed on Hugging Face Spaces using Gradio.
 
 The trained model is deployed using FastAPI, allowing real-time predictions through a REST API.
 
@@ -54,10 +55,63 @@ Uvicorn
 
 Joblib
 
+
+
+
+## 🚀 Live Demo
+
+You can enter mobile specifications and instantly get the predicted price category:
+
+- 0 → Low Cost
+- 1 → Medium Cost
+- 2 → High Cost
+- 3 → Very High Cost
+
+---
+
+## 🧠 Features Used in Model
+
+The model uses the following input features:
+
+- Battery Power
+- Bluetooth (Yes/No)
+- Clock Speed
+- Dual SIM
+- Front Camera
+- 4G
+- Internal Memory
+- Mobile Depth
+- Mobile Weight
+- Number of Cores
+- Primary Camera
+- Pixel Height
+- Pixel Width
+- RAM
+- Screen Height
+- Screen Width
+- Talk Time
+- 3G
+- Touch Screen
+- WiFi
+
+---
+
+## 🛠️ Tech Stack
+
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Gradio
+- Cloudpickle
+- Hugging Face Spaces
+
+---
+
 📂 Project Structure
 mobile-price-api/
 │
-├── main.py
+├── app.py
 ├── mobile_price_model.pkl
 ├── train.csv
 ├── requirements.txt
@@ -68,34 +122,13 @@ mobile-price-api/
 git clone https://github.com/yourusername/mobile-price-api.git
 cd mobile-price-api
 
-2️⃣ Install Dependencies
-pip install -r requirements.txt
-
-▶️ Run the API
-uvicorn main:app --reload
-
-
-Server will start at:
-
-http://127.0.0.1:8000
-
-📄 API Documentation (Swagger UI)
-
-Open in browser:
-
-http://127.0.0.1:8000/docs
 
 
 
 
-🧾 requirements.txt
-fastapi
-uvicorn
-scikit-learn
-joblib
-numpy
-pandas
-pydantic
+
+
+
 
 
 
